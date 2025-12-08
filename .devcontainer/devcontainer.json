@@ -1,0 +1,47 @@
+{
+  "name": "Site Verne",
+  
+  "build": {
+	"dockerfile": "Dockerfile",
+	"context": "."
+  },
+
+  "forwardPorts": [3000],
+  
+  "workspaceFolder": "/workspaces/siteverne",
+
+  "features": {
+		"ghcr.io/devcontainers/features/common-utils": {
+			"installZsh": true,
+			"installGit": true,
+			"installCurl": true,
+			"installWget": true,
+			"installLsof": true
+		},
+		"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
+			"plugins": "zsh-autosuggestions zsh-syntax-highlighting",
+			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions.git https://github.com/zsh-users/zsh-syntax-highlighting.git"
+		}
+	},
+
+  // Adiciona extensões do VS Code que são úteis para o desenvolvimento React/Node.js
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // Configurações específicas do VS Code no contêiner
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint", // ESLint
+        "esbenp.prettier-vscode", // Prettier
+        "dzannotti.vscode-babel-javascript", // Suporte Babel (opcional)
+        "ms-vscode.node-debugger" // Debugger Node
+      ]
+    }
+  },
+
+  // Comando executado APÓS a criação do contêiner (e antes do VS Code anexar)
+  // Útil para instalar dependências.
+  "postCreateCommand": "npm install"
+  
+}
