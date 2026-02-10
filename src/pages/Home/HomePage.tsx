@@ -1,4 +1,4 @@
-import { Header } from '@/components/layout';
+import { Header, Footer } from '@/components/layout';
 import { HeroSection } from './sections/HeroSection';
 import styles from './HomePage.module.css';
 
@@ -9,6 +9,7 @@ export function HomePage() {
       <main className={styles.main}>
         <HeroSection />
       </main>
+      <Footer />
     </div>
   );
 }

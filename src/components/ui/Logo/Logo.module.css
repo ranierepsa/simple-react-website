@@ -1,11 +1,13 @@
 .logo {
-  --logo-height: 70px;
-  --logo-height-mobile: 60px;
+  --logo-height: 60px;
+  --logo-height-tablet: 50px;
+  --logo-height-mobile: 40px;
   
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   transition: opacity var(--transition-normal, 0.3s ease);
+  flex-shrink: 0;
 }
 
 .logo:hover {
@@ -13,7 +15,7 @@
 }
 
 .logo:focus-visible {
-  outline: 2px solid var(--color-primary, #00D9A5);
+  outline: 2px solid var(--color-primary, #5BA4C9);
   outline-offset: 4px;
   border-radius: 4px;
 }
@@ -22,6 +24,12 @@
   height: var(--logo-height);
   width: auto;
   object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .image {
+    height: var(--logo-height-tablet);
+  }
 }
 
 @media (max-width: 480px) {
