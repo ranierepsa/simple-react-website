@@ -2,6 +2,7 @@ import { Header } from '@/components/layout';
 import { HeroSection } from './sections/HeroSection';
 import styles from './HomePage.module.css';
 import ContactSectionView from './sections/contact/ContactSectionView';
+import MissionSectionView from './sections/mission/MissionSectionView';
 
 export function HomePage() {
   return (
@@ -9,6 +10,7 @@ export function HomePage() {
       <Header />
       <main className={styles.main}>
         <HeroSection />
+        <MissionSectionView />
         <ContactSectionView />
       </main>
     </div>
