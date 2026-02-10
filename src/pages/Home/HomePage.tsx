@@ -3,6 +3,7 @@ import { HeroSection } from './sections/HeroSection';
 import styles from './HomePage.module.css';
 import ContactSectionView from './sections/contact/ContactSectionView';
 import MissionSectionView from './sections/mission/MissionSectionView';
+import VisionSectionView from './sections/vision/VisionSectionView';
 
 export function HomePage() {
   return (
@@ -11,6 +12,7 @@ export function HomePage() {
       <main className={styles.main}>
         <HeroSection />
         <MissionSectionView />
+        <VisionSectionView />
         <ContactSectionView />
       </main>
     </div>
